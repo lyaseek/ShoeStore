@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="welcome">Welcome,\t </string>
+    <string name="mark">!</string>
+    <string name="login_fragment">Sign in/ Register</string>
+    <string name="welcome_fragment">Welcome</string>
+    <string name="instruction_fragment">Instructions</string>
+    <string name="shoes_list">Shoes</string>
+    <string name="shoe_detail_fragment">Details</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="shoe_s_description">Shoe\'s description</string>
+    <string name="shoe_s_company">Shoe\'s Company</string>
+    <string name="shoe_s_size">Shoe\'s size</string>
+    <string name="shoe_s_name">Shoe\'s Name</string>
+    <string name="description">Description:</string>
+    <string name="company">Company:</string>
+    <string name="size">Size:</string>
+    <string name="name">Name:</string>
+    <string name="hello_login">Hello, Login!</string>
+    <string name="please_read_our_instructions">Please, read our instructions!</string>
+    <string name="go_to_instructions">go to instructions</string>
+    <string name="_1_for_adding_new_shoe_use_quot_quot_button">1. For adding new Shoe use \"+\" button</string>
+    <string name="_2_quot_name_quot_and_quot_size_quot_fields_are_required">2. \"Name\" and \"Size\" fields are required</string>
+    <string name="_3_for_saving_new_shoe_use_quot_save_quot_button">3. For saving new Shoe use \"SAVE\" button</string>
+    <string name="go_to_shoes">go to shoes</string>
+    <string name="login">Login:</string>
+    <string name="enter_your_e_mail">Enter your E-mail</string>
+    <string name="password">Password:</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="log_in">Log in</string>
+    <string name="join_now">Join Now</string>
+</resources>
