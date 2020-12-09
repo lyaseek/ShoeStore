@@ -21,9 +21,6 @@ class ShoeDetailsFragment : Fragment() {
     private val viewModel: ShoeListViewModel by activityViewModels()
     private lateinit var shoeName: String
     private lateinit var shoeSize: String
-    private lateinit var shoeCompany: String
-    private lateinit var shoeDescription: String
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,12 +31,12 @@ class ShoeDetailsFragment : Fragment() {
             inflater,
             R.layout.shoe_detail_fragment, container, false
         )
-        binding.cancelButton.setOnClickListener { findNavController().navigate(R.id.action_shoeDetailsFragment_to_shoeListFragment) }
+        binding.cancelButton.setOnClickListener {
+            findNavController().navigate(R.id.action_shoeDetailsFragment_to_shoeListFragment)
+        }
         binding.saveButton.setOnClickListener {
             shoeName = binding.newShoeName.text.toString()
             shoeSize = binding.newShoeSize.text.toString()
-            shoeDescription = binding.newShoeDescription.text.toString()
-            shoeCompany = binding.newShoeCompany.text.toString()
             if (shoeName.isEmpty()) {
                 Toast.makeText(context, "Enter Shoe's Name", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
@@ -50,13 +47,16 @@ class ShoeDetailsFragment : Fragment() {
                 Toast.makeText(context, "Enter Shoe's Size", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
-            viewModel.addShoe(shoeName, shoeSize.toDouble(), shoeCompany, shoeDescription)
+            viewModel.description.value = binding.newShoeDescription.text.toString()
+            viewModel.name.value = shoeName
+            viewModel.company.value = binding.newShoeCompany.text.toString()
+            viewModel.size.value = shoeSize.toDouble()
+            viewModel.addShoe()
             findNavController().navigate(R.id.action_shoeDetailsFragment_to_shoeListFragment)
         }
         val navController = findNavController()
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
-
         return binding.root
     }
 }

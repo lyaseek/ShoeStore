@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
-            name="shoeListViewModel"
+            name="shoe"
             type="com.example.android.shoestore.viewModel.ShoeListViewModel" />
     </data>
 
@@ -29,9 +30,9 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingEnd="@dimen/small_padding"
+                android:orientation="vertical"
                 android:paddingStart="8dp"
-                android:orientation="vertical">
+                android:paddingEnd="@dimen/small_padding">
 
                 <TextView
                     android:id="@+id/add_shoe_name"
@@ -76,44 +77,44 @@
                     style="@style/NewShoeStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autofillHints=""
                     android:ems="10"
                     android:hint="@string/shoe_s_name"
                     android:inputType="textPersonName"
-                    android:textAlignment="center"
-                    android:autofillHints="" />
+                    android:textAlignment="center" />
 
                 <EditText
                     android:id="@+id/new_shoe_size"
                     style="@style/NewShoeStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autofillHints=""
                     android:ems="10"
                     android:hint="@string/shoe_s_size"
                     android:inputType="numberDecimal"
-                    android:textAlignment="center"
-                    android:autofillHints="" />
+                    android:textAlignment="center" />
 
                 <EditText
                     android:id="@+id/new_shoe_company"
                     style="@style/NewShoeStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autofillHints=""
                     android:ems="10"
                     android:hint="@string/shoe_s_company"
                     android:inputType="textPersonName"
-                    android:textAlignment="center"
-                    android:autofillHints="" />
+                    android:textAlignment="center" />
 
                 <EditText
                     android:id="@+id/new_shoe_description"
                     style="@style/NewShoeStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autofillHints=""
                     android:ems="30"
                     android:hint="@string/shoe_s_description"
                     android:inputType="textMultiLine"
-                    android:textAlignment="center"
-                    android:autofillHints="" />
+                    android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
 
@@ -130,6 +131,5 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/layout_margin"
             android:text="@string/cancel" />
-
     </LinearLayout>
 </layout>
