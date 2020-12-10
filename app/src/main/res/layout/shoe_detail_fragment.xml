@@ -81,6 +81,7 @@
                     android:ems="10"
                     android:hint="@string/shoe_s_name"
                     android:inputType="textPersonName"
+                    android:text="@{shoe.name}"
                     android:textAlignment="center" />
 
                 <EditText
@@ -92,6 +93,7 @@
                     android:ems="10"
                     android:hint="@string/shoe_s_size"
                     android:inputType="numberDecimal"
+                    android:text="@{shoe.size.toString()}"
                     android:textAlignment="center" />
 
                 <EditText
@@ -103,6 +105,7 @@
                     android:ems="10"
                     android:hint="@string/shoe_s_company"
                     android:inputType="textPersonName"
+                    android:text="@{shoe.company}"
                     android:textAlignment="center" />
 
                 <EditText
@@ -114,6 +117,7 @@
                     android:ems="30"
                     android:hint="@string/shoe_s_description"
                     android:inputType="textMultiLine"
+                    android:text="@{shoe.description}"
                     android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>

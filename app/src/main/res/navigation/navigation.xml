@@ -59,7 +59,9 @@
             app:enterAnim="@android:anim/fade_in"
             app:exitAnim="@android:anim/fade_out"
             app:popEnterAnim="@android:anim/fade_in"
-            app:popExitAnim="@android:anim/fade_out" />
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_shoeListFragment_to_login"
             app:destination="@id/login"
@@ -71,9 +73,5 @@
     <fragment
         android:id="@+id/shoeDetailsFragment"
         android:name="com.example.android.shoestore.screens.ShoeDetailsFragment"
-        android:label="@string/shoe_detail_fragment">
-        <action
-            android:id="@+id/action_shoeDetailsFragment_to_shoeListFragment"
-            app:destination="@id/shoeListFragment" />
-    </fragment>
+        android:label="@string/shoe_detail_fragment"/>
 </navigation>

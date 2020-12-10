@@ -32,7 +32,7 @@ class ShoeDetailsFragment : Fragment() {
             R.layout.shoe_detail_fragment, container, false
         )
         binding.cancelButton.setOnClickListener {
-            findNavController().navigate(R.id.action_shoeDetailsFragment_to_shoeListFragment)
+            findNavController().navigateUp()
         }
         binding.saveButton.setOnClickListener {
             shoeName = binding.newShoeName.text.toString()
@@ -52,7 +52,7 @@ class ShoeDetailsFragment : Fragment() {
             viewModel.company.value = binding.newShoeCompany.text.toString()
             viewModel.size.value = shoeSize.toDouble()
             viewModel.addShoe()
-            findNavController().navigate(R.id.action_shoeDetailsFragment_to_shoeListFragment)
+            findNavController().navigateUp()
         }
         val navController = findNavController()
         val appBarConfiguration = AppBarConfiguration(navController.graph)

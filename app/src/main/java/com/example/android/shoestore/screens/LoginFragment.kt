@@ -21,6 +21,9 @@ class Login : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        //I'm using LinearLayout in Fragments and Activity,
+        // because I'm gonna need just orientation component and weighted spacing of views.
+        // There is no need to create complex UI.
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.login_fragment,
